@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+      "name": "komue-node", //项目名称
+      "script": "./app.js",//启动文件
+      "cwd": "/",//项目目录位置
+      "watch": [ //监测目录
+        "build",
+        "config",
+        "dist",
+        "src",
+        "static",
+        "server"
+      ],
+      "log_file"        : "data/logs/jyan/log.log",
+      "error_file"      : "data/logs/jyan/err.log",
+      "out_file"        : "data/logs/jyan/out.log",
+      "merge_logs"      : true,
+      "log_date_format": "YYYY-MM-DD HH:mm Z" //日志时间格式
+    }
+  ]
+}
