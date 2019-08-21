@@ -1,6 +1,6 @@
 <template>
 	<div>
-		默认页面
+		登录页
 	</div>
 </template>
 

@@ -20,9 +20,7 @@ export default {
 		// }
 	},
 	mounted(){
-		// 当前页面用来判断各种逻辑和跳转...
-		// 已经登录 跳 /home
-		// 未登录   跳 /login 
+
 	}
 }
 </script>

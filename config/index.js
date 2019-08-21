@@ -11,14 +11,14 @@ module.exports = {
     proxyTable: {  // 代理接口跨域
         '/api': {
             changeOrigin: true,
-            target: 'http://l.testin.cn:10086/',
+            target: 'http://localhost:1024/',
             pathRewrite: {
                 '^/api': ''
             }
         }
     },
     // host: 'localhost',
-    host: 'l.testin.cn',
+    host: 'localhost',
     port: 8080, // 端口
     autoOpenBrowser: false, // 启动server之后自动打开浏览器
     errorOverlay: true, //  在浏览器是否展示错误蒙层

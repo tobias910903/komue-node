@@ -12,15 +12,6 @@ Vue.prototype.$post = post;
 Vue.prototype.$get = get;
 Vue.prototype.$api = URL_CONFIG;
 
-// utils
-import {arrayFun} from '@/utils/array'
-import {timeFun} from '@/utils/time'
-import {validatorFun} from '@/utils/validator'
-Vue.prototype.$array = arrayFun
-Vue.prototype.$time = timeFun
-Vue.prototype.$validator = validatorFun
-
-
 // 阻止启动生产消息
 Vue.config.productionTip = false
 

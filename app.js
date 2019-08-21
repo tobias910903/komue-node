@@ -4,9 +4,7 @@ const path = require('path');
 const express = require('express');
 const chalk = require('chalk');
 const app = express();
-let CONFIG = require('./server/api');
-
-console.log("当前开发环境：", CONFIG.ENV);
+let CONFIG = require('./server/config');
 
 app.use(express.static(path.resolve(__dirname, './dist')))	// 生产环境目录
 
@@ -16,10 +14,10 @@ app.get('/', function(req, res) {
 })
 
 // 测试接口
-app.get(CONFIG.URL.test, function (req, res) {
-	res.send({user:'test'});
+app.get('/test', function (req, res) {
+	res.json({user:'test'});
 });
 
-app.listen(10086, res => { // 端口
-	console.log(chalk.yellow('服务启动，端口号为：10086'));
+app.listen(CONFIG.PORT, res => {
+	console.log(chalk.yellow('服务启动成功', "环境：",CONFIG.ENV, "端口号：", CONFIG.PORT));
 });

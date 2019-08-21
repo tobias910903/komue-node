@@ -12,9 +12,9 @@
         "static",
         "server"
       ],
-      "log_file"        : "data/logs/jyan/log.log",
-      "error_file"      : "data/logs/jyan/err.log",
-      "out_file"        : "data/logs/jyan/out.log",
+      "log_file"        : "data/logs/komuenode/log.log",
+      "error_file"      : "data/logs/komuenode/err.log",
+      "out_file"        : "data/logs/komuenode/out.log",
       "merge_logs"      : true,
       "log_date_format": "YYYY-MM-DD HH:mm Z" //日志时间格式
     }

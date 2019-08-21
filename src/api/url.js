@@ -4,7 +4,7 @@ console.log("当前环境:", process.env.ENV_CONFIG, " 接口域名:", process.e
 let URL_PROXY = process.env.ENV_CONFIG == "dev" ? "/api" : "";
 
 let URL_CONFIG = {
-	test: URL_PROXY + "/testapi"
+	test: URL_PROXY + "/test"
 }
 
 export {URL_CONFIG}

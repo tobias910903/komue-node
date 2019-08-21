@@ -2,19 +2,19 @@
 	<div>
 		<div class="home-header">
 			<div class="header-logo kom-pull-left">
-				<span>这里可以是logo</span>
+				<span>logo</span>
 			</div>
 			<div class="header-info kom-pull-right">
 				<span>用户名</span>
-				<span class="home-logout"><i class="kiconfont kiconfenlei"></i> 退出</span>
+				<span class="home-logout">退出</span>
 			</div>
 		</div>
 		<div class="home-sider">
 			<ul>
-				<li><i class="kiconfont kiconfenlei"></i> 导航一</li>
-				<li><i class="kiconfont kiconfenlei"></i> 导航一</li>
-				<li class="active"><i class="kiconfont kiconfenlei"></i> 导航一</li>
-				<li><i class="kiconfont kiconfenlei"></i> 导航一</li>
+				<li>导航一</li>
+				<li>导航一</li>
+				<li class="active">导航一</li>
+				<li>导航一</li>
 			</ul>
 		</div>
 		<div class="home-content">
@@ -99,9 +99,6 @@ export default {
 				cursor: pointer;
 				-webkit-transition: .4s;
 				transition: .4s;
-				i{
-					margin-right: 10px;
-				}
 				&.active, &:hover{
 					background:rgba(73,92,138,1);
 					padding-left: 30px;
