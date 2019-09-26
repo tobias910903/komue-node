@@ -4,13 +4,8 @@ import router from './router'
 import store from '@/vuex/store'
 
 // axios
-import axios from 'axios'
-import {post, get} from '@/api'
-import {URL_CONFIG} from '@/api/url'
-
-Vue.prototype.$post = post;
-Vue.prototype.$get = get;
-Vue.prototype.$api = URL_CONFIG;
+import ajax from '@/api'
+Vue.prototype.$ajax = ajax;
 
 // 阻止启动生产消息
 Vue.config.productionTip = false
