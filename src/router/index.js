@@ -5,15 +5,14 @@ import Router from 'vue-router'
 Vue.use(Vuex)
 Vue.use(Router)
 
-
 /* 路由 */
-import notfound from '@/pages/404'
-import login from '@/pages/login'
-import home from '@/pages/home'
-import childrenList from '@/pages/childrenList'
-import childrenDetail from '@/pages/childrenDetail'
+import notfound from '@/views/404'
+import login from '@/views/login'
+import home from '@/views/home'
+import childrenList from '@/views/childrenList'
+import childrenDetail from '@/views/childrenDetail'
 
-export default new Router({
+let router = new Router({
   routes: [
     {
       path: '*',
@@ -45,3 +44,9 @@ export default new Router({
   ]
 })
 
+// 导航守卫
+router.beforeEach((to, from, next) => {
+  next();
+});
+
+export default router;
