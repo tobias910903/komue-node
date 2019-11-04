@@ -15,13 +15,7 @@ export default {
 
 	},
 	mounted(){
-		console.log(this.$api);
 
-		this.$get(this.$api.test).then((response) => {
-	        console.log(response);
-	    }).catch(err => {
-	        console.log(err);
-	    });
 	}
 }
 </script>
