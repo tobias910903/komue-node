@@ -1,22 +1,21 @@
 {
-  "apps": [
-    {
-      "name": "komue-node", //项目名称
-      "script": "./app.js",//启动文件
-      "cwd": "/",//项目目录位置
-      "watch": [ //监测目录
-        "build",
-        "config",
-        "dist",
-        "src",
-        "static",
-        "server"
-      ],
-      "log_file"        : "data/logs/komuenode/log.log",
-      "error_file"      : "data/logs/komuenode/err.log",
-      "out_file"        : "data/logs/komuenode/out.log",
-      "merge_logs"      : true,
-      "log_date_format": "YYYY-MM-DD HH:mm Z" //日志时间格式
-    }
-  ]
+    "apps": [
+        {
+            "name": "komServer", // 服务端
+            "script": "app_server.js", // 启动文件
+            "log_file"        : "/logs/kom_server/log.log",
+            "error_file"      : "/logs/kom_server/err.log",
+            "out_file"        : "/logs/kom_server/out.log",
+            "merge_logs"      : true,
+            "log_date_format": "YYYY-MM-DD HH:mm Z"
+        }, {
+            "name": "komSocket", // WEBSOCKET
+            "script": "app_socket.js", // 启动文件
+            "log_file"        : "/logs/kom_socket/log.log",
+            "error_file"      : "/logs/kom_socket/err.log",
+            "out_file"        : "/logs/kom_socket/out.log",
+            "merge_logs"      : true,
+            "log_date_format": "YYYY-MM-DD HH:mm Z"
+        }
+    ]
 }

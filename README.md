@@ -1,4 +1,7 @@
-> Nodejs + express + pm2 + vuecli2 
+> Nodejs + express + pm2 + Socket.io + vuecli2
+
+> Mysql
+
 > 本地开发跨域处理
 
 ```
