@@ -18,38 +18,37 @@ router.post("/register", function (req, res) {
     CONNECTION.query(add, addParams, function (err, result) {
         if (err) {
             console.log('[INSERT ERROR] - ', err.message);
-            res.send({code: 500, msg: "服务异常"});
+            res.send({code: -1, msg: "服务异常"});
             return;
         }
 
-        res.send({code: 200});
+        res.send({code: 0});
     });
 
     CONNECTION.end();
 });
 
-router.post("/login", function (req, res) {
+router.get("/detail", function (req, res) {
+    let params = req.query;
+    if(isNaN(params.id)){ // 参数异常
+        res.send({code: 1001, msg: "参数异常"});
+        return;
+    }
+
+    let query = "SELECT * FROM dd LEFT JOIN aa ON aa.id = dd.uid WHERE aa.id = ?";
+    let queryParams = [Number(params.id)];
+
     CONNECTION = mysql.createConnection(CONFIG.MYSQL_CONNECTION);
     CONNECTION.connect();
-
-    let params = req.body;
-    let query = "SELECT * FROM user WHERE username = ? AND password = ?";
-    let queryParams = [params.username, md5(params.password)];
-
     CONNECTION.query(query, queryParams, function (err, result) {
         if (err) {
             console.log('[SELECT ERROR] - ', err.message);
-            res.send({code: 500, msg: "服务异常"});
+            res.send({code: -1, msg: "服务异常"});
             return;
         }
 
-        if(result.length == 0){
-            res.send({code: 501, msg: "用户名或密码错误"});
-        }else{
-            res.send({code: 200});
-        }
+        res.send({code: 0, result: result});
     });
-
     CONNECTION.end();
 });
 
