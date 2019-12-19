@@ -1,6 +1,6 @@
 > Nodejs + express + pm2 + Socket.io + vuecli2
 
-> Mysql
+> Mysql + redis
 
 > 本地开发跨域处理
 

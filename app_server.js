@@ -9,6 +9,14 @@ const bodyParser = require('body-parser'); /* post方法 */
 const route = require("./server/route");
 const CONFIG = require('./server/config');
 
+// const redis = require('redis'); // 引入 redis
+// const rdsClient = redis.createClient(CONFIG.REDIS_CONNECTION.PORT, CONFIG.REDIS_CONNECTION.HOST, CONFIG.REDIS_CONNECTION.OPTS);
+
+// 测试一下redis
+// rdsClient.get('test_redis' , function(err, resRds){
+//     console.log(resRds);
+// });
+
 // 添加json解析
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
