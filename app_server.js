@@ -35,12 +35,22 @@ app.use(session({
 //  req.session.userName = null;
 //  req.session['userName'] = 'testName';
 
+// 跨域处理
+// app.use("*", function(req, res, next){
+//     res.header('Access-Control-Allow-Origin', "*");
+//     res.header("Access-Control-Allow-Headers", "*");
+//     res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+//     res.header('Access-Control-Allow-Credentials', true);
+//     res.header("X-Powered-By", ' 1.0.1');
+//     next();
+// });
+
 // 生产环境目录
-app.use(express.static(path.resolve(__dirname, './dist')));
+app.use(express.static(path.resolve(__dirname, './www')));
 
 // 生产环境目录index文件
 app.get('/', function(req, res) {
-    const html = fs.readFileSync(path.resolve(__dirname, './dist/index.html'), 'utf-8');
+    const html = fs.readFileSync(path.resolve(__dirname, './www/index.html'), 'utf-8');
     res.send(html)
 });
 
