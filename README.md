@@ -1,37 +1,20 @@
-> Nodejs + express + pm2 + Socket.io + vuecli2
+> Nodejs + express + pm2 + Socket.io
 
 > Mysql + redis
 
-> 本地开发跨域处理
-
 ```
-******* 本地开发 ********
-> npm install 
-
-先启动Node服务
-> npm run start:test
-
-再启动WEB
-> npm run dev
-
 ******* 测试环境Node服务 ********
-安装依赖 && 打包 && 启动
+安装依赖 && 启动 && 重启 && 停止 && 清除
 > npm install 
-> npm run build:test
 > npm run start:test
-
-重启 && 停止 && 清除
 > npm run restart:test
 > npm run stop
 > npm run delete
 
 ******* 生产环境Node服务 ********
-安装依赖 && 打包 && 启动
+安装依赖 && 启动 && 重启 && 停止 && 清除
 > npm install 
-> npm run build
 > npm run start
-
-重启 && 停止 && 清除
 > npm run restart
 > npm run stop
 > npm run delete
